@@ -47,7 +47,7 @@
     "deploy": "gh-pages -d build",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.js\" \"extension/src/*.js\" --write",
-    "start": "react-scripts start",
+    "start": "export PORT=3002 && react-scripts start",
     "build": "react-scripts build",
     "build:extension": "yarn build && cp -a ./build/. ./extension/build/ && yarn build:extension-scripts",
     "build:extension-scripts": "cp -a ./extension/src/. ./extension/build/.",
